@@ -25,14 +25,6 @@ pipeline{
         }
 
         // 添加第二个stage， 运行源码打包命令
-        stage('Package'){
-          steps{
-              container("maven") {
-                  sh "mvn package -B -DskipTests"
-              }
-          }
-        }
-
 
         // 添加第四个stage, 运行容器镜像构建和推送命令， 用到了environment中定义的groovy环境变量
         stage('Image Build And Publish'){
