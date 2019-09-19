@@ -44,6 +44,6 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: jenkins-default-jenkins
+          serviceName: jenkins-java-demo
           servicePort: 8080
         path: /
