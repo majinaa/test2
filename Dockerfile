@@ -1,2 +1,2 @@
-FROM tomcat
-ADD target/demo.war /usr/local/tomcat/webapps/demo.war
+FROM nginx
+ADD index.html /usr/share/nginx/html/index.html
