@@ -32,18 +32,3 @@ spec:
   selector:
     app: jenkins-java-demo
   type: ClusterIP
-  
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: jenkins
-spec:
-  rules:
-  - host: test.ca19cf0167fbc4b4cba43d1c154c297fb.cn-beijing.alicontainer.com
-    http:
-      paths:
-      - backend:
-          serviceName: jenkins-java-demo
-          servicePort: 80
-        path: /
